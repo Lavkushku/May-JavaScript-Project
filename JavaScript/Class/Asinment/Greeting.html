@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+        form{
+            width: 80%;
+            border: 3px solid rgb(8, 26, 129);
+            border-radius: 10px;
+            padding-left: 1.5rem;
+            padding-top: 1rem;
+            margin: 0 auto;
+        }
+        button{
+            background-color: rgb(247, 0, 255);
+            color:white;
+            border: 1px solid rgb(74, 226, 27) ;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            scale: 0.9;
+        }
+       
+
+    </style>
+</head>
+<body>
+   
+
+    <section>
+        <form action="">
+            <h1>Hey! whats Up?</h1>
+          <label for="name"><b>Enter Your Name</b></label> <br>
+          <input type="text" id="name"> <br>
+          <label for="name"><b>Enter Your Time</b></label> <br>
+          <input type="number" name="" id="time" /> <br> <br>
+          <button type="button" id="myBtn">Cick It</button>
+          <h3 id="result-b" style="color: red;text-shadow: 0px 0px 1px black;"></h3>
+        </form>
+      </section>
+
+
+    <script>
+        document.getElementById("myBtn").onclick = function (){
+      var time = prompt("Hey whats time:");
+        if(time > 5 && time < 12){
+           // alert("Good Morning");
+            let userName = document.getElementById("name").value
+            document.getElementById("result-b").innerHTML = "Good Morning "+userName+ " Welcome"
+        }
+        else if(time > 12 && time < 17){
+          //  alert("Good Afternoon");
+          let userName = document.getElementById("name").value
+                document.getElementById("result-b").innerHTML = "Good Afternon "+userName+" Welcome"
+        }
+        else if(time > 17 && time < 21){
+          //  alert("Good Evening");
+          let userName = document.getElementById("name").value
+                document.getElementById("result-b").innerHTML = "Good Evening "+userName+" welcome"
+        }
+       
+       
+        else{
+           /// alert("Good Night");
+           let userName = document.getElementById("name").value
+                document.getElementById("result-b").innerHTML = "Good Night "+userName+" Welcome"
+        };
+
+    }
+    </script>
+</body>
+</html>
